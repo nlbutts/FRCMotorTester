@@ -1,0 +1,85 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 8b7d42f7-da13-4f9b-ae64-d2ea00a4933f)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 29.21 26.67) (size 29.21 20.32) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 5ac3371f-bd28-4e71-8a84-c880cf36d86f)
+    (property "Sheetname" "Pico" (at 29.21 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Pico.kicad_sch" (at 29.21 47.5746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "FRCMotorTester"
+        (path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 182.88 26.67) (size 35.56 20.32) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 8ce18279-c24a-4fc6-a071-ab76dabc1fca)
+    (property "Sheetname" "IO" (at 182.88 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "IO.kicad_sch" (at 182.88 47.5746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "FRCMotorTester"
+        (path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f" (page "5"))
+      )
+    )
+  )
+
+  (sheet (at 76.2 26.67) (size 30.48 20.32) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 901daec7-ebc5-4b56-9f65-1aeb323e4fd0)
+    (property "Sheetname" "CAN" (at 76.2 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Can.kicad_sch" (at 76.2 47.5746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (property "Field2" "" (at 76.2 26.67 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "FRCMotorTester"
+        (path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 128.27 26.67) (size 30.48 20.32) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid e8491de4-daf1-4f92-903f-4d4365ccfebc)
+    (property "Sheetname" "Power" (at 128.27 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Power.kicad_sch" (at 128.27 47.5746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "FRCMotorTester"
+        (path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f" (page "4"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
