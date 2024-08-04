@@ -1163,27 +1163,28 @@
 				)
 			)
 		)
-		(symbol "Device:Crystal"
-			(pin_numbers hide)
+		(symbol "Device:Crystal_GND24"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Y"
-				(at 0 3.81 0)
+				(at 3.175 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "Crystal"
-				(at 0 -3.81 0)
+			(property "Value" "Crystal_GND24"
+				(at 3.175 3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -1204,7 +1205,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Two pin crystal"
+			(property "Description" "Four pin crystal, GND on pins 2 and 4"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1231,7 +1232,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Crystal_0_1"
+			(symbol "Crystal_GND24_0_1"
 				(rectangle
 					(start -1.143 2.54)
 					(end 1.143 -2.54)
@@ -1245,7 +1246,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 0) (xy -1.905 0)
+						(xy -2.54 0) (xy -2.032 0)
 					)
 					(stroke
 						(width 0)
@@ -1257,7 +1258,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.905 -1.27) (xy -1.905 1.27)
+						(xy -2.032 -1.27) (xy -2.032 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -1269,7 +1270,31 @@
 				)
 				(polyline
 					(pts
-						(xy 1.905 -1.27) (xy 1.905 1.27)
+						(xy 0 -3.81) (xy 0 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.556) (xy 0 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -1.27) (xy 2.032 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -1281,7 +1306,31 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 0) (xy 1.905 0)
+						(xy 2.032 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.286) (xy -2.54 -3.556) (xy 2.54 -3.556) (xy 2.54 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.286) (xy -2.54 3.556) (xy 2.54 3.556) (xy 2.54 2.286)
 					)
 					(stroke
 						(width 0)
@@ -1292,7 +1341,7 @@
 					)
 				)
 			)
-			(symbol "Crystal_1_1"
+			(symbol "Crystal_GND24_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 1.27)
@@ -1312,7 +1361,7 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
+					(at 0 5.08 270)
 					(length 1.27)
 					(name "2"
 						(effects
@@ -1322,6 +1371,42 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 1.27)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4707,6 +4792,14 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff4907b6-34cb-4a45-b57e-9b792f785251")
+	)
+	(no_connect
+		(at 96.52 78.74)
+		(uuid "d93b1b21-3747-4fec-bc1e-afe8010b6a04")
+	)
+	(no_connect
+		(at 86.36 78.74)
+		(uuid "f9548e7f-c3db-4224-b085-aff476c1df03")
 	)
 	(wire
 		(pts
@@ -8255,7 +8348,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 50.8 181.61 0)
 			(effects
 				(font
@@ -8401,7 +8494,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 95.25 181.61 0)
 			(effects
 				(font
@@ -8478,6 +8571,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C84267"
+			(at 245.11 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "56e83680-d658-4236-b7f8-e37267d76d56")
 		)
@@ -8501,7 +8603,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "31cd8171-0b19-409d-b303-f1052077ae10")
 		(property "Reference" "D11"
 			(at 53.6575 22.86 0)
@@ -8564,7 +8665,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C130887"
+		(property "JLCPCB" "C7420325"
 			(at 53.34 29.21 0)
 			(effects
 				(font
@@ -8643,7 +8744,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 106.68 181.61 0)
 			(effects
 				(font
@@ -8722,7 +8823,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 60.96 181.61 0)
 			(effects
 				(font
@@ -8754,10 +8855,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3fe30d3f-1ccb-445d-9661-fb5d0e913f5e")
 		(property "Reference" "C4"
-			(at 82.55 78.74 90)
+			(at 82.55 90.932 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8765,7 +8865,7 @@
 			)
 		)
 		(property "Value" "15p"
-			(at 82.55 81.28 90)
+			(at 82.55 93.472 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8944,7 +9044,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 83.82 181.61 0)
 			(effects
 				(font
@@ -9089,7 +9189,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 40.64 181.61 0)
 			(effects
 				(font
@@ -9120,7 +9220,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4f4483fb-e68a-4df1-b9a4-1b8201837abd")
 		(property "Reference" "J7"
@@ -9418,7 +9518,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 77.47 138.43 0)
 			(effects
 				(font
@@ -9497,7 +9597,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 30.48 181.61 0)
 			(effects
 				(font
@@ -9576,7 +9676,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 118.11 181.61 0)
 			(effects
 				(font
@@ -9625,7 +9725,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 36.068 48.26 90)
 			(effects
 				(font
@@ -9644,6 +9744,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 34.29 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C423025"
 			(at 34.29 48.26 0)
 			(effects
 				(font
@@ -9695,7 +9804,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 43.4848 40.64 0)
 			(effects
 				(font
@@ -9714,6 +9823,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 44.45 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C76612"
 			(at 44.45 44.45 0)
 			(effects
 				(font
@@ -10340,6 +10458,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C11702"
+			(at 107.95 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "230f8455-aa3b-439a-8391-a62b1c241125")
 		)
@@ -10350,6 +10477,89 @@
 			(project "FRCMotorTester"
 				(path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f/5ac3371f-bd28-4e71-8a84-c880cf36d86f"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal_GND24")
+		(at 91.44 78.74 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "989bba03-85a3-417e-8c82-793b1120029c")
+		(property "Reference" "Y2"
+			(at 104.14 73.7868 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Crystal_GND24"
+			(at 104.14 76.3268 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+			(at 91.44 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Four pin crystal, GND on pins 2 and 4"
+			(at 91.44 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C156247"
+			(at 91.44 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f98b1290-9134-4d35-8798-d3e149cc0092")
+		)
+		(pin "2"
+			(uuid "c8649771-a6f4-488a-91c7-14b5beb94d74")
+		)
+		(pin "3"
+			(uuid "bdce353d-c1f6-428c-8f48-3f8e1fb929a8")
+		)
+		(pin "4"
+			(uuid "db774025-d1d8-43c9-959b-d0bbb98f4ef7")
+		)
+		(instances
+			(project ""
+				(path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f/5ac3371f-bd28-4e71-8a84-c880cf36d86f"
+					(reference "Y2")
 					(unit 1)
 				)
 			)
@@ -10483,6 +10693,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C7519"
+			(at 71.12 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "47ca221d-4b04-456a-8ed8-4173551d0539")
 		)
@@ -10505,85 +10724,6 @@
 			(project ""
 				(path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f/5ac3371f-bd28-4e71-8a84-c880cf36d86f"
 					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Crystal")
-		(at 91.44 78.74 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e6a92f2-6944-4d3c-aa64-506173d0a814")
-		(property "Reference" "Y1"
-			(at 95.25 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Crystal"
-			(at 95.25 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm"
-			(at 91.44 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 91.44 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C882606"
-			(at 91.44 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c682cd36-9557-422e-911e-c07ca885329c")
-		)
-		(pin "1"
-			(uuid "5c687dea-4162-4a3f-af59-f728dfc0b1ac")
-		)
-		(instances
-			(project "FRCMotorTester"
-				(path "/8b7d42f7-da13-4f9b-ae64-d2ea00a4933f/5ac3371f-bd28-4e71-8a84-c880cf36d86f"
-					(reference "Y1")
 					(unit 1)
 				)
 			)
@@ -10617,7 +10757,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 125.4252 140.97 0)
 			(effects
 				(font
@@ -10644,7 +10784,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C76612"
 			(at 124.46 137.16 0)
 			(effects
 				(font
@@ -10983,7 +11123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 20.0152 185.42 0)
 			(effects
 				(font
@@ -11010,7 +11150,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" ""
 			(at 19.05 181.61 0)
 			(effects
 				(font
@@ -11498,7 +11638,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 72.39 181.61 0)
 			(effects
 				(font
@@ -11782,6 +11922,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C11702"
+			(at 67.31 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a2e407d8-3d51-430a-a632-e3256aa99588")
 		)
@@ -11825,7 +11974,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 113.9952 140.97 0)
 			(effects
 				(font
@@ -11852,7 +12001,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C76612"
 			(at 113.03 137.16 0)
 			(effects
 				(font
@@ -11987,6 +12136,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 245.11 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C2837377"
 			(at 245.11 22.86 0)
 			(effects
 				(font

@@ -3443,7 +3443,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2342366a-88f0-4ccf-b6e0-3ed7a6bc8d6c")
 		(property "Reference" "H3"
@@ -3989,7 +3989,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5b7df5f1-15ca-487a-812d-4f05815855c9")
 		(property "Reference" "H4"
@@ -4270,7 +4270,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C130887"
+		(property "JLCPCB" "C7420325"
 			(at 207.01 81.28 0)
 			(effects
 				(font
@@ -4929,7 +4929,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C130887"
+		(property "JLCPCB" "C7420325"
 			(at 172.72 97.79 0)
 			(effects
 				(font
@@ -5275,7 +5275,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d3c779d0-f21d-49ff-94af-5872f2eecd76")
 		(property "Reference" "H2"
@@ -5834,7 +5834,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f88be65b-5765-4527-9334-259456fd2a1c")
 		(property "Reference" "H1"
@@ -5968,7 +5968,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C576538"
+		(property "JLCPCB" "C1330201"
 			(at 177.8 81.28 0)
 			(effects
 				(font

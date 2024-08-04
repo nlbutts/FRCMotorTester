@@ -3852,7 +3852,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 41.91 40.64 0)
 			(effects
 				(font
@@ -3908,7 +3908,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 222.25 105.7148 0)
 			(effects
 				(font
@@ -3927,6 +3927,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 218.44 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C76612"
 			(at 218.44 106.68 0)
 			(effects
 				(font
@@ -4639,7 +4648,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 176.53 39.37 0)
 			(effects
 				(font
@@ -4790,7 +4799,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 30.48 40.64 0)
 			(effects
 				(font
@@ -4958,7 +4967,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 134.62 40.64 0)
 			(effects
 				(font
@@ -5152,7 +5161,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 222.25 118.4148 0)
 			(effects
 				(font
@@ -5171,6 +5180,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 218.44 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C76612"
 			(at 218.44 119.38 0)
 			(effects
 				(font
@@ -5639,7 +5657,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 83.82 39.37 0)
 			(effects
 				(font
@@ -5790,7 +5808,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C2655418 "
+		(property "JLCPCB" "C432917"
 			(at 123.19 40.64 0)
 			(effects
 				(font
@@ -6352,7 +6370,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 228.9048 124.46 0)
 			(effects
 				(font
@@ -6371,6 +6389,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 229.87 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C76612"
 			(at 229.87 128.27 0)
 			(effects
 				(font

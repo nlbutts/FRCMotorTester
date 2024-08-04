@@ -58,7 +58,13 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "lib_footprint_mismatch|100000000|61000000|54308ed2-bff5-4fea-9ec0-cb96041b83fe|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|132388500|61297500|00c57ffa-a77e-4a39-8db2-ef52d9a796b2|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|165000000|61000000|0b83800f-e85c-4f7e-b806-709137101036|00000000-0000-0000-0000-000000000000",
+        "text_height|109200000|42500000|54183b2f-d050-4431-929a-912959ce443f|00000000-0000-0000-0000-000000000000",
+        "text_thickness|109200000|42500000|54183b2f-d050-4431-929a-912959ce443f|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -79,6 +85,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -501,6 +508,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "bom/FRCMotorTester_bom.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
