@@ -4584,7 +4584,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3V3"
 			(at 105.41 137.16 0)
 			(effects
 				(font
@@ -5251,12 +5251,12 @@
 		)
 		(instances
 			(project "mini_swerve"
-				(path "/7b13ca2d-4787-4b14-ace6-dd7fc0029365/98e97447-ac14-4048-9df9-2b44368c2963"
-					(reference "#PWR05")
-					(unit 1)
-				)
 				(path "/7b13ca2d-4787-4b14-ace6-dd7fc0029365/8cc3428c-4be3-45c7-9ce3-835a66df6326"
 					(reference "#PWR046")
+					(unit 1)
+				)
+				(path "/7b13ca2d-4787-4b14-ace6-dd7fc0029365/98e97447-ac14-4048-9df9-2b44368c2963"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -5618,12 +5618,12 @@
 		)
 		(instances
 			(project "mini_swerve"
-				(path "/7b13ca2d-4787-4b14-ace6-dd7fc0029365/98e97447-ac14-4048-9df9-2b44368c2963"
-					(reference "#PWR06")
-					(unit 1)
-				)
 				(path "/7b13ca2d-4787-4b14-ace6-dd7fc0029365/8cc3428c-4be3-45c7-9ce3-835a66df6326"
 					(reference "#PWR045")
+					(unit 1)
+				)
+				(path "/7b13ca2d-4787-4b14-ace6-dd7fc0029365/98e97447-ac14-4048-9df9-2b44368c2963"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
