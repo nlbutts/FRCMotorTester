@@ -3852,7 +3852,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C432917"
+		(property "JLCPCB" "C1525"
 			(at 41.91 40.64 0)
 			(effects
 				(font
@@ -3935,7 +3935,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C76612"
+		(property "JLCPCB" "C23630"
 			(at 218.44 106.68 0)
 			(effects
 				(font
@@ -4367,7 +4367,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C207261"
+		(property "JLCPCB" "C32677"
 			(at 64.135 131.445 0)
 			(effects
 				(font
@@ -4648,7 +4648,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C432917"
+		(property "JLCPCB" "C1525"
 			(at 176.53 39.37 0)
 			(effects
 				(font
@@ -4799,7 +4799,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C432917"
+		(property "JLCPCB" "C1525"
 			(at 30.48 40.64 0)
 			(effects
 				(font
@@ -4885,7 +4885,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C207261"
+		(property "JLCPCB" "C32677"
 			(at 45.085 131.445 0)
 			(effects
 				(font
@@ -4967,7 +4967,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C432917"
+		(property "JLCPCB" "C1525"
 			(at 134.62 40.64 0)
 			(effects
 				(font
@@ -5188,7 +5188,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C76612"
+		(property "JLCPCB" "C23630"
 			(at 218.44 119.38 0)
 			(effects
 				(font
@@ -5508,7 +5508,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C207261"
+		(property "JLCPCB" "C32677"
 			(at 81.915 131.445 0)
 			(effects
 				(font
@@ -5657,7 +5657,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C432917"
+		(property "JLCPCB" "C1525"
 			(at 83.82 39.37 0)
 			(effects
 				(font
@@ -5808,7 +5808,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C432917"
+		(property "JLCPCB" "C1525"
 			(at 123.19 40.64 0)
 			(effects
 				(font
@@ -6397,7 +6397,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C76612"
+		(property "JLCPCB" "C23630"
 			(at 229.87 128.27 0)
 			(effects
 				(font
@@ -6550,7 +6550,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C207261"
+		(property "JLCPCB" "C32677"
 			(at 104.14 131.445 0)
 			(effects
 				(font
