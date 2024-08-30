@@ -1,0 +1,3 @@
+MODLOG
+
+Connect pin 10 of U2 to 5V
