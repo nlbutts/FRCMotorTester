@@ -1,0 +1,3 @@
+[submodule "software/micropython"]
+	path = software/micropython
+	url = git@github.com:nlbutts/micropython.git
