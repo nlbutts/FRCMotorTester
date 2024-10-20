@@ -1,6 +1,35 @@
 from machine import Pin
 from pyb import CAN
 import pyb
+import struct
+import time
+
+def debug_can(can, filter=-1):
+    while True:
+        message = can.recv(0)
+        id = message[0]
+        devtype = id >> 24
+        mfg = (id >> 16) & 0xFF
+        cls = (id >> 10) & 0x3F
+        idx = (id >> 6) & 0xF
+        devid = id & 0x3F
+        s = f'DevID: {devid} idx: {idx} cls: {cls} mfg: {mfg} devtype: {devtype} raw: {id:08X} data: '
+        for b in message[4]:
+            s += f'{b:02X} '
+        if filter == -1 or filter == idx:
+            print(s)
+
+def drive_motor(can, devid, output):
+    while True:
+        devtype = 2
+        mfg = 5
+        cls = 0
+        idx = 0
+        can_id = devtype << 24 | mfg << 16 | cls << 10 | idx << 6 | devid
+        data = struct.pack('<fB', output, 0x01)  # Format the payload
+        print(f'{can_id:08X} {data}')
+        can.send(data, can_id)  # Send the CAN message
+        time.sleep(0.1)
 
 sw = Pin('SW', Pin.IN)
 prev = sw.value()
@@ -33,7 +62,9 @@ can_stb.value(1)
 can = CAN(1, CAN.NORMAL)
 
 # Configure the CAN bus settings
-can.init(CAN.NORMAL, prescaler=8, sjw=1, bs1=14, bs2=6)
+can.init(CAN.NORMAL, prescaler=2, sjw=1, bs1=14, bs2=6, auto_restart=True)
+can.setfilter(0, can.MASK32, 0, (0, 0))
+can.send('hello', 123)
 
 # The prescaler needs to be 0. When incrementing, the counter will count up-to
 # and including the period value, and then reset to 0.

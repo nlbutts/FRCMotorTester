@@ -6851,6 +6851,16 @@
 		)
 		(uuid "ff5fba81-c70b-4334-9c02-d2b7ed1884b4")
 	)
+	(text "These can be used for SPI2"
+		(exclude_from_sim no)
+		(at 202.946 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7a5277ed-3e76-4d91-a6c7-ff6d4fa78246")
+	)
 	(label "OSC_IN"
 		(at 100.33 72.39 180)
 		(fields_autoplaced yes)
