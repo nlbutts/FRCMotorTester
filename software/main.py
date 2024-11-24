@@ -1,8 +1,12 @@
 from machine import Pin
 from pyb import CAN
+from sparkmax import SparkMax
 import pyb
-import struct
 import time
+import sys
+import struct
+
+VERSION = 0.5
 
 def debug_can(can, filter=-1):
     while True:
@@ -12,24 +16,12 @@ def debug_can(can, filter=-1):
         mfg = (id >> 16) & 0xFF
         cls = (id >> 10) & 0x3F
         idx = (id >> 6) & 0xF
-        devid = id & 0x3F
+        devid = id & 0x3F        
         s = f'DevID: {devid} idx: {idx} cls: {cls} mfg: {mfg} devtype: {devtype} raw: {id:08X} data: '
         for b in message[4]:
             s += f'{b:02X} '
-        if filter == -1 or filter == idx:
+        if filter == -1 or filter == devid:
             print(s)
-
-def drive_motor(can, devid, output):
-    while True:
-        devtype = 2
-        mfg = 5
-        cls = 0
-        idx = 0
-        can_id = devtype << 24 | mfg << 16 | cls << 10 | idx << 6 | devid
-        data = struct.pack('<fB', output, 0x01)  # Format the payload
-        print(f'{can_id:08X} {data}')
-        can.send(data, can_id)  # Send the CAN message
-        time.sleep(0.1)
 
 sw = Pin('SW', Pin.IN)
 prev = sw.value()
@@ -63,27 +55,99 @@ can = CAN(1, CAN.NORMAL)
 
 # Configure the CAN bus settings
 can.init(CAN.NORMAL, prescaler=2, sjw=1, bs1=14, bs2=6, auto_restart=True)
-can.setfilter(0, can.MASK32, 0, (0, 0))
-can.send('hello', 123)
+can.setfilter(0, can.MASK32, 0, (0, 0), extframe=True)
+can.send('hello', 0, extframe=True)
 
 # The prescaler needs to be 0. When incrementing, the counter will count up-to
 # and including the period value, and then reset to 0.
-tim1 = pyb.Timer(1, prescaler=0, period=1000)
-tim2 = pyb.Timer(2, prescaler=0, period=1000)
+tim1 = pyb.Timer(1, prescaler=0, period=100)
+tim2 = pyb.Timer(2, prescaler=0, period=100)
 # ENC_AB will increment/decrement on the rising edge of either the A channel or the B
 # channel.
 ch1 = tim1.channel(1, pyb.Timer.ENC_AB)
 ch2 = tim2.channel(1, pyb.Timer.ENC_AB)
 
-while True:
+def get_spark_max_ids(can):
+    ids = {}
+    start = time.time()
+    while time.time() - start < 1:
+        m = can.recv(0)
+        id = m[0] & 0x3F
+        if id > 0:
+            ids[id] = 1
+    print(ids)
+    return list(ids.keys())
+
+def show_boot_screen(can_ids=[]):
     lcd.fill(0)
-    lcd.text(f'{tim1.counter()}  /  {tim2.counter()}', 0, 0, 1)
-    lcd.text(f'L/R: {press1.value()}/{press2.value()}', 0, 10, 1)
+    lcd.text(f'Brushless Buddy', 0, 0, 1)
+    lcd.text(f'{VERSION}', 0, 10, 1)
+    if len(can_ids) > 0:
+        s = 'Found: '
+        for id in can_ids:
+            s += f'{id} '
+        lcd.text(s, 0, 20, 1)
+    else:
+        lcd.text(f'Found: None', 0, 20, 1)
     lcd.show()
-    pyb.delay(100)
-    # pyb.delay(200)
-    # if sw.value() and not prev:
-    #     print('Draw')
-    #     lcd.pixel(5, 5, 1)
-    #     lcd.show()
-    prev = sw.value()
+
+show_boot_screen()
+found = False
+while not found:
+    ids = get_spark_max_ids(can)
+    if len(ids) > 0:
+        found = True
+
+ids = sorted(ids)
+print(f'Found ids: {ids}')
+
+if len(ids) > 2:
+    lcd.fill(0)
+    lcd.text('Too many CAN', 0, 0, 1)
+    lcd.text('nodes on bus', 0, 10, 1)
+    lcd.show()
+    time.sleep(5)
+    sys.reset()
+
+motors = []
+if len(ids) == 1:
+    motors.append(SparkMax(can, ids[0], tim1, press1))
+elif len(ids) == 2:
+    motors.append(SparkMax(can, ids[0], tim1, press1))
+    motors.append(SparkMax(can, ids[1], tim2, press2))
+
+#debug_can(can, 0)
+
+start = time.time()
+while True:
+    msg = can.recv(0)
+    motor_info = []
+    arm_field = 0
+    for motor in motors:
+        motor.process(msg)        
+        motor_info.append(motor.get_info())
+        if motor.arm:
+            arm_field |= 1 << motor.id
+
+    # Send the heartbeat message
+    can_id = 0x02052C80
+    data = struct.pack('<II', arm_field, 0)
+    can.send(data, can_id, extframe=True, timeout=100)
+
+    if time.time() - start > 0.1:
+        start = time.time()
+        lcd.fill(0)
+        if len(motor_info) == 1:
+            lcd.text(f'{motor_info[0]['id']}/{motor_info[0]['arm']}', 0, 0, 1)
+            lcd.text(f'{motor_info[0]['output']}', 0, 10, 1)
+            lcd.text(f'{motor_info[0]['volt']:.1f}/{motor_info[0]['current']}', 0, 20, 1)
+        else:
+            str = f'{motor_info[0]['id']}/{motor_info[0]['arm']} | {motor_info[1]['arm']}/{motor_info[1]['id']}'
+            lcd.text(str, 0, 0, 1)
+
+            str = f'{motor_info[0]['output']:4.2f}   | {motor_info[1]['output']:4.2f}'
+            lcd.text(str, 0, 10, 1)
+
+            str = f'{motor_info[0]['volt']:.1f} / {motor_info[0]['current']:2.1f} / {motor_info[1]['current']:2.1f}'
+            lcd.text(str, 0, 20, 1)
+        lcd.show()

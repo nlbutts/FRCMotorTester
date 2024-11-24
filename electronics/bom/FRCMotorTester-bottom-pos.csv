@@ -1,1 +1,4 @@
 Ref,Val,Package,PosX,PosY,Rot,Side
+"DS1","NHD-C12832A1Z-FSW-FBW-3V3","LCD_NHD-C12832A1Z-FSW-FBW-3V3",132.388500,-60.960000,180.000000,bottom
+"SW2","RotaryEncoder_Switch","RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",107.250000,-58.500000,180.000000,bottom
+"SW3","RotaryEncoder_Switch","RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",172.250000,-58.500000,180.000000,bottom
