@@ -2925,6 +2925,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C52923"
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0042af01-e439-4368-84b4-1f9b42f76713")
 		)
@@ -2987,6 +2996,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 57.15 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C52923"
 			(at 57.15 119.38 0)
 			(effects
 				(font
@@ -3475,7 +3493,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 241.173 83.82 90)
 			(effects
 				(font
@@ -3502,7 +3520,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22787"
+		(property "JLCPCB" "C25079"
 			(at 239.395 83.82 0)
 			(effects
 				(font
@@ -3669,7 +3687,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "455-B4B-PH-SM4-TBCT-ND"
+		(property "Digikey" "455-1721-ND"
 			(at 270.51 85.09 0)
 			(effects
 				(font

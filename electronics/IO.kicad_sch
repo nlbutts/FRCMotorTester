@@ -3695,7 +3695,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C57112"
+		(property "JLCPCB" "C15195"
 			(at 41.91 40.64 0)
 			(effects
 				(font
@@ -3866,6 +3866,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "455-1723-ND"
+			(at 91.44 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "298f120d-f727-4b99-abe0-e03d703a274f")
 		)
@@ -4004,6 +4013,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 254 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C52923"
 			(at 254 128.27 0)
 			(effects
 				(font
@@ -4520,7 +4538,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C57112"
+		(property "JLCPCB" "C15195"
 			(at 30.48 40.64 0)
 			(effects
 				(font
@@ -4688,7 +4706,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C57112"
+		(property "JLCPCB" "C15195"
 			(at 134.62 40.64 0)
 			(effects
 				(font
@@ -4834,6 +4852,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 238.76 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C52923"
 			(at 238.76 128.27 0)
 			(effects
 				(font
@@ -5377,7 +5404,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C57112"
+		(property "JLCPCB" "C15195"
 			(at 123.19 40.64 0)
 			(effects
 				(font
@@ -5765,6 +5792,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C52923"
+			(at 261.62 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5f4b5853-da73-469f-81f9-a7e71a93d584")
 		)
@@ -5824,6 +5860,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 246.38 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C52923"
 			(at 246.38 128.27 0)
 			(effects
 				(font
@@ -6034,6 +6079,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 269.24 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C52923"
 			(at 269.24 128.27 0)
 			(effects
 				(font

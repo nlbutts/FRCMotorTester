@@ -9810,6 +9810,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "C12246"
+			(at 256.54 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d067c941-46fa-4e4c-8c60-63d14703f995")
 		)
@@ -10087,7 +10096,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 36.068 48.26 90)
 			(effects
 				(font
@@ -10114,7 +10123,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C25126"
 			(at 34.29 48.26 0)
 			(effects
 				(font
@@ -10394,6 +10403,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 256.54 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C12246"
 			(at 256.54 31.75 0)
 			(effects
 				(font
@@ -10829,7 +10847,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C11702"
 			(at 107.95 74.93 0)
 			(effects
 				(font
@@ -11451,7 +11469,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C1779"
 			(at 19.05 181.61 0)
 			(effects
 				(font
@@ -11975,7 +11993,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C11702"
 			(at 67.31 113.03 0)
 			(effects
 				(font
