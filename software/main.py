@@ -5,7 +5,7 @@ import time
 import sys
 import struct
 
-VERSION = 0.6
+VERSION = 1.0
 
 class SparkMax():
     def __init__(self, can, id, enc):
@@ -107,11 +107,11 @@ class SparkMax():
             s += f'{b:02X} '
         print(s)
 
-def get_spark_max_ids(can):
+def get_spark_max_ids(can, delay=2):
     try:
         ids = {}
         start = time.time()
-        while time.time() - start < 1:
+        while time.time() - start < delay:
             m = can.recv(0)
             id = m[0] & 0x3F
             if id > 0:
