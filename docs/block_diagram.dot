@@ -1,0 +1,31 @@
+digraph G {
+  fontname="Helvetica,Arial,sans-serif"
+  node [fontname="Helvetica,Arial,sans-serif"]
+  edge [fontname="Helvetica,Arial,sans-serif"]
+  a0 [shape=none label=<
+ <TABLE border="0" cellspacing="10" cellpadding="10" style="rounded" bgcolor="grey" gradientangle="315">
+  <TR><TD bgcolor="green">Encoder 1</TD>
+  <TD bgcolor="lightyellow">LCD</TD>
+  <TD bgcolor="green">Encoder 2</TD>
+  <TD bgcolor="cornflowerblue">Power monitor</TD>
+  </TR>
+
+  <TR><TD bgcolor="maroon">LED1</TD>
+  <TD rowspan="2"  bgcolor="violet">STM32F446 CPU</TD>
+  <TD bgcolor="red">3.3V Regulator</TD>
+  <TD bgcolor="red">3.0V Regulator</TD>
+  </TR>
+
+  <TR><TD bgcolor="maroon">LED2</TD>
+  <TD colspan="2"  bgcolor="red">12V Buck</TD>
+  </TR>
+
+  <TR><TD style="radial" bgcolor="blue">CAN J10</TD>
+  <TD style="radial" bgcolor="blue" gradientangle="45">Power J2</TD>
+  <TD style="radial" bgcolor="blue" gradientangle="90" >Aux J3</TD>
+  <TD style="radial" bgcolor="chartreuse">EdgeConnect</TD>
+  </TR>
+
+</TABLE>>];
+
+}

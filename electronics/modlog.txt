@@ -1,0 +1,4 @@
+MODLOG
+
+Change the BOOT pin so when the switch is held on reset, it will go into DFU
+mode.
