@@ -67,5 +67,27 @@ The design runs Micropython. To re-build the code do the following:
 9) Program **firmware.elf** using the STM32CubeProgrammer.
 
 ## SWD Debug
-1) Run
+It is assumed you are using a JLink and it is installed in **/opt/SEGGER/JLink**
+In the software directory:
+1) Run **gdbstart.sh** in one terminal
+2) Run debug.sh in other terminal. You now have the full power of GDB at your literial finger tips
+
+## Python
+
+This device runs micropython. So the main program is a Python program. The
+main program is called **main.py**, catchy aint it?
+
+There are two levels of software upgrades. If you need to upgrade the Python code,
+simply update main.py and copy it over to the **PYBFLASH** device.
+
+If you need to update Micropython, then use a terminal program to open the REPL terminal.
+Hit CTRL-C to stop the program. Then type
+```
+import machine
+machine.bootloader()
+```
+
+This will put the processor in DFU upgrade mode. You can now use STM32CubeProgrammer to program
+the DFU file. If the upgrade fails, then the device will have to be JTAGed. The next rev
+of the PCB will fix a defect and a physical button will allow the unit to be booted in DFU mode.
 
