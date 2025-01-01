@@ -150,15 +150,6 @@ prev = sw.value()
 
 lcd = pyb.LCD('X')
 
-# pin_a = Pin('ENC1A', Pin.AF_PP, pull=Pin.PULL_UP, af=Pin.AF1_TIM1)
-# pin_b = Pin('ENC1B', Pin.AF_PP, pull=Pin.PULL_UP, af=Pin.AF1_TIM1)
-
-#pin_c = Pin('ENC2A', Pin.AF_PP, pull=Pin.PULL_UP, af=Pin.AF1_TIM2)
-#pin_d = Pin('ENC2B', Pin.AF_PP, pull=Pin.PULL_UP, af=Pin.AF1_TIM2)
-
-#press1 = Pin('PRESS1', Pin.IN, pull=Pin.PULL_UP)
-#press2 = Pin('PRESS2', Pin.IN, pull=Pin.PULL_UP)
-
 can_txd = Pin('CAN_TX', Pin.AF_PP, af=Pin.AF9_CAN1)
 can_rxd = Pin('CAN_RX', Pin.AF_PP, af=Pin.AF9_CAN1)
 
